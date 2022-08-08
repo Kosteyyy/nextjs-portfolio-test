@@ -10,7 +10,7 @@ import Skills from "../components/Skills";
 
 const messageData = {
   message: {
-    chat: { id: process.env.chatId },
+    chat: { id: process.env.CHAT_ID },
     text: "Привет, ботик! Приложение запустилось",
   },
 };
@@ -18,7 +18,7 @@ const messageData = {
 export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
-      const responseJSON = await fetch(process.env.botUrl, {
+      const responseJSON = await fetch(process.env.BOT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: {
@@ -27,7 +27,7 @@ export default function Home() {
         },
         body: JSON.stringify({
           message: {
-            chat: { id: 566164556 },
+            chat: { id: process.env.CHAT_ID },
             text: "Привет, ботик! Приложение запустилось снова!",
           },
         }),
