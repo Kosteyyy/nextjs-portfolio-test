@@ -16,12 +16,12 @@ const messageData = {
 };
 
 export default function Home() {
-  console.log(process.env.CHAT_ID, process.env.NEXT_PUBLIC_BOT_URL);
+  console.log(process.env.NEXT_PUBLIC_CHAT_ID, process.env.NEXT_PUBLIC_BOT_URL);
   useEffect(() => {
     const fetchData = async () => {
       const responseJSON = await fetch(process.env.NEXT_PUBLIC_BOT_URL, {
         method: "POST",
-        mode: "no-cors",
+        // mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
           // 'Content-Type': 'application/x-www-form-urlencoded',
