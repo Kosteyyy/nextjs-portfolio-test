@@ -10,16 +10,16 @@ import Skills from "../components/Skills";
 
 const messageData = {
   message: {
-    chat: { id: process.env.CHAT_ID },
+    chat: { id: process.env.NEXT_PUBLIC_CHAT_ID },
     text: "Привет, ботик! Приложение запустилось",
   },
 };
 
 export default function Home() {
-  console.log(process.env.CHAT_ID, process.env.BOT_URL);
+  console.log(process.env.CHAT_ID, process.env.NEXT_PUBLIC_BOT_URL);
   useEffect(() => {
     const fetchData = async () => {
-      const responseJSON = await fetch(process.env.BOT_URL, {
+      const responseJSON = await fetch(process.env.NEXT_PUBLIC_BOT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: {
@@ -28,7 +28,7 @@ export default function Home() {
         },
         body: JSON.stringify({
           message: {
-            chat: { id: process.env.CHAT_ID },
+            chat: { id: process.env.NEXT_PUBLIC_CHAT_ID },
             text: "Привет, ботик! Приложение запустилось снова опять!",
           },
         }),
