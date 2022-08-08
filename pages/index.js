@@ -16,6 +16,7 @@ const messageData = {
 };
 
 export default function Home() {
+  console.log(process.env.CHAT_ID, process.env.BOT_URL);
   useEffect(() => {
     const fetchData = async () => {
       const responseJSON = await fetch(process.env.BOT_URL, {
