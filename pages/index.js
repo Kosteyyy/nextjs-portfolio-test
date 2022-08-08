@@ -28,7 +28,7 @@ export default function Home() {
         body: JSON.stringify({
           message: {
             chat: { id: process.env.CHAT_ID },
-            text: "Привет, ботик! Приложение запустилось снова!",
+            text: "Привет, ботик! Приложение запустилось снова опять!",
           },
         }),
       });
